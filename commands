@@ -1,0 +1,32 @@
+
+
+To start the application :
+npm run dev
+
+======================
+npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+
+==============================
+
+bun install    -not working
+npm install -g bun
+or npm install
+================================================================
+
+Step 01:
+ npm create vite@latest
+ Need to install the following packages:
+create-vite@7.1.1
+Ok to proceed? (y) y
+│
+◇  Project name:
+│  12MegaBlog
+│
+◇  Package name:
+│  12megablog
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
