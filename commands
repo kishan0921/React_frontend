@@ -1,5 +1,9 @@
 
 
+12MegaBlog/src/conf/conf.js
+
+==========================
+
 To start the application :
 npm run dev
 
