@@ -1,5 +1,5 @@
 import  {Client, Account, ID} from "appwrite";
-import conf from "../conf/conf";
+import conf from "../conf/conf.js";
 
 
 // Yaha hum export kar rahe hai class,and name de rahe hai- AuthSerive
