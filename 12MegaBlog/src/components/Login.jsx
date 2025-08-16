@@ -99,11 +99,11 @@ function Login() {
         // and isske ander hum apna method send krte hai, ki iss tarah se hum submit handle krengege. 
         // not yaha handleSubmit ek event hai. */}
 
-        //Note: why we use handleSubmit ?
+        {/* //Note: why we use handleSubmit ?
         - form me jitne bhi input field wagera hum denge,to yaha agar hum register() ka use krte hai,
          krte hai to , automatically form me jitne bhi input field wagera hum denge, usska state manage krne ki zarurate nahi h
          //automatically, from ke saare value register pick krega and without , managing state 
-         // apne aap handleSubmit call krte time, saare value wo le lega. 
+         // apne aap handleSubmit call krte time, saare value wo le lega.  */}
         <form onSubmit={handleSubmit(login)} className='mt-8'>
             <div className='space-y-5'>
                 {/* // chalo ek input field banayenge, and self closing hai ye <Input/> */}
