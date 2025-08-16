@@ -1,3 +1,7 @@
+// Note:  forwardRef ka use krenge- 2 Tarike se 
+// 1st - this file input.jsx
+// 2nd = select.jsx (export me "React.forwardRef" ye use kr liye h)
+
 // Issme hum ek new chiz use krenge, Id to wo le liye hai react se
 import React, {useId} from 'react'
 
