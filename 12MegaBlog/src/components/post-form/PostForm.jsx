@@ -1,3 +1,7 @@
+// ye appko time laagega smjhne me
+// video deko - 7:22:00 baar baar
+
+
 import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Input, RTE, Select } from "..";
@@ -142,18 +146,39 @@ export default function PostForm({ post }) {
     // Interview Ques : uppr jo slugTransform banaye h, ussko use kaise krna h ?
 
 
-    
+    // react me se hum useEffect use kr lete hai
     React.useEffect(() => {
-        const subscription = watch((value, { name }) => {
-            if (name === "title") {
-                setValue("slug", slugTransform(value.title), { shouldValidate: true });
+        // Ab hum banayenge subscription
+        // ab ye subscription kaise banega? - ye banta hai watch method se
+
+        const subscription = watch(
+            // ab watch ke ander bhi ek callback milta hai.
+            // ab ander mujhe value milti hai, and name milti hai
+            (value, { name }) => {
+            // humare pass jo name hai, wo tittle hai.
+                if (name === "title") {
+            // ab jaha pe title hai wooha ek setvalue() method use krenge
+                setValue("slug", slugTransform(value.title), 
+                // validate krna hai ya nahi ? to hum kr rahe hai 
+                { shouldValidate: true });
             }
         });
 
+        // return ke ander ek callback milta hai,ussko call krke subscription ko unsubscribe kr rahe h 
         return () => subscription.unsubscribe();
-    }, [watch, slugTransform, setValue]);
+    }, 
+    // ab dependecy array me hai watch, sllugTransform, setValue , ye sab me kuch bhi change aayega then hum useefect ko run krna h
+    [watch, slugTransform, setValue]);
+
+
 
     return (
+        // form mera 2 part me divided hai 
+        // first part me 2/3 wala part hoga
+        // second part me 1/3 wala part hoga
+
+
+        // first part me 2/3 wala part hoga
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
             <div className="w-2/3 px-2">
                 <Input
@@ -171,8 +196,13 @@ export default function PostForm({ post }) {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />
+
+                {/* // aur RTE maine banaya tha ussko as it is pass kr denge. */}
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
+
+
+            // second part me 1/3 wala part hoga
             <div className="w-1/3 px-2">
                 <Input
                     label="Featured Image :"
