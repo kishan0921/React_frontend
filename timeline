@@ -1,0 +1,122 @@
+
+Docuemnt :
+Redux Toolkit -  https://redux-toolkit.js.org/introduction/getting-started
+https://react-hook-form.com/
+https://www.npmjs.com/package/html-react-parser
+TinyMCE  - Url
+AppWrite - https://appwrite.io/docs
+Api Hub (Open Source ) - https://github.com/hiteshchoudhary/apihub
+
+
+
+React Part - 02  - 16 July , 2025 (Only mega Blog Project Skip-Rest all Done)
+Context Api , Local Storage
+Project 6 (Todos App) - 
+localStorage Funcationality - 39:50  - 48:15
+Project 06 (Todos App) - End (1:14:00)
+Redux ToolKit - 1:18:00
+React-Dom, react-native - 1:19:00
+Redux DevTool - Crhome Extension (1:27:00)
+Redux Story End - 1:29:00
+---------------------------
+Redux ToolKit (Store,Reducers or slicers,useSelector Method, UseDispatch Method) - 1:30:00
+Bun - 1:31:00 (Used)
+https://redux-toolkit.js.org/introduction/getting-started
+Project (Todo using Redux toolkit) - 1:37:00
+nanoid - 1:38:00 (provide unique id)
+Store and Reducers (Create) - 1:50:00
+Use Selector, UseReducor - 1:53:00
+[Imp] How to use Redux ToolKit - 2:12:00
+[Imp]Project (Todo using Redux ToolKit) - Summary - 2:16:00
+Project 06 (Final END) - 2:25:00
+-----------------------------
+New Project () - 2:28:00 [Backend using Appwrite]
+Project 07 (Blog App)  (Decoded)- Start 2:36:00
+Overview - Appwrite (Backend as service - same as Firebase) - 2:39:00 - 2:44:00
+TinyMCE -  2:45:00  (Text Editor Provide Karta hai.)
+React - html-Parser - 2:46:00
+React Form Hook - 2:47:00
+Project 07 (Blog App) - 2:54:00 - Start  
+Project 07 (Blog App) - 7:55:00 - End 
+Project 07 (Blog App) - Debugging start - 7:55:00 - 8:17:00
+Summary - 8:19:00
+Api Hub (Open Source ) - https://github.com/hiteshchoudhary/apihub
+
+  
+
+
+========================================================================================================================
+15_July,2025 (React Part - 01 ) - Done 
+
+Doumentation: https://github.com/facebook/react/blob/main/packages/react/src/ReactHooks.js
+
+React Fiber Architecture :-  https://github.com/acdlite/react-fiber-architecture
+
+Pexels : https://www.pexels.com/
+Dev UI (Tailwinds Cards )- 
+
+React- Router Docs : https://reactrouter.com/home
+https://reactrouter.com/6.28.0/start/overview
+==================================================================
+Custom React - Summary (2:20:00 -- 2:23:30 )   [Evaluated Expression]
+important notes: - 2:23:00 - 2:27:00  (React Documentation)
+2:41:00 (Hooks) - https://github.com/facebook/react/blob/main/packages/react/src/ReactHooks.js
+
+React Fiber Architecture (3:01:00)   (3:15:00) - end
+Tailwind Story (3:15:00 - 3:31:00) -end
+Props / Destructing -(3:31:00) - 3:48:00 -end
+Interview Question (Application- Counter App) - :3:49:00 - 3:58:00
+Project 1 (Bckground change)  - 3:58:00 - 4:15:00
+Project 2 (Password  Generator) - 4:16:00 - 5:07:00 
+Project 2 (Summary) - 5:07:00 - 5:12:00  [Usestate, useEffect,UseMemo,UseRef] (Imp)
+Project 3 (Currency Convertor) - 5:14:00 -    (Re-Markable reusable component) [Custom Hooks]
+Custom Hook (5:23:00  -- 5:34:00)
+Component Re-usable  (5:34:00  -- )
+Important Better Approach :(5:50:00- 5:52:00)
+UseId (Hook) - 5:52:00 - 5:56:00 
+Project 3 (Currency Convertor) - 6:14:00 (end)
+Project 4(React _Router - dom) --  6:15:00 - 
+Link and NavLink  Diff (6:26:00)
+Footer Component (6:31:00)  - 6:33:00
+Home Component (6:33:00 )
+User Route (6:54:00)  
+Use params (6:56:00)
+Github Component (6:59:00)  [UseEffect] [UseState]
+loader (7:05:00)   - https://reactrouter.com/6.28.0/start/overview  [Data Loading - Topic]
+UseLodder Hook (7:11:00)
+Project 4  [Summary - 7:13:00 - 7:17:00]
+"Note" : we have to work on 2 project to understand Context API, Redux topics"
+Project 5(Theme Toggle ) - 7:22:00
+Prop Drilling - 7:22:00
+State-Management (Readux, Redux Toolkit (RTK), react-redux,Zustand) - 7:28:00
+Context API - 7:31:00
+Project 5(Theme Toggle ) - 7:32:00 - Start
+UseContext -2nd Trick (7:56:00)
+Tailwind config - 8:28:00
+Project 5(Theme Toggle )  - 8:31:00 - End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
