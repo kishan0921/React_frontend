@@ -14,7 +14,7 @@ import {createContext, useContext} from "react"
 export const TodoContext = createContext({
     // Rules : 
     // 01 - property define kr do context ka (Example - theme : dark waise hi)
-    // 02 - functionlity define ki jaati hai context ki. and empty rahti h....main file me hum define krte hai.
+    // 02 - functionlity/Methods define ki jaati hai context ki. and empty rahti h....main file me hum define krte hai.
 
 // Ab jab aap context bana rahe ho to context ki kuch default value hogi.
 
@@ -44,7 +44,7 @@ export const TodoContext = createContext({
 
     ],
 
-    // 02 functionlity define krenge and wo empty rahega.
+    // 02 functionlity/methods define krenge and wo empty rahega.
 
     // first funcitonality add krenge - addTodo
     // ab addTodo kaise functionality h?  
