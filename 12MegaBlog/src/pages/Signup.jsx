@@ -1,4 +1,6 @@
 import React from 'react'
+
+// isske ander kuch khaas ni h, bas ek component import krwaayenge bs.
 import { Signup as SignupComponent } from '../components'
 
 function Signup() {

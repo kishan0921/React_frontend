@@ -3,9 +3,15 @@
 
 
 import React, { useCallback } from "react";
+//yaha functionality thoda extra h, useForm hum import krenge.
 import { useForm } from "react-hook-form";
+
+// then apna banaya component chahiye hoga like button, editor(RTE), input , Select
 import { Button, Input, RTE, Select } from "..";
+
+// appwrite ki service bhi lagegi  , kyuki actually appwrite ki data collect kregi.
 import appwriteService from "../../appwrite/config";
+// aur naviagtor and Selector chahiye
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 

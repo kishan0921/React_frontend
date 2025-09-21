@@ -1,7 +1,31 @@
 
 
+7:24:00 - 
 
-4:59:00 - 
+Step 01:
+Create Signup.jsx - 7:24:00
+12MegaBlog/src/pages/Signup.jsx
+
+Create Login.jsx - 7:26:00
+12MegaBlog/src/pages/Login.jsx
+
+Create Post Add wala Page - 7:27:00
+12MegaBlog/src/pages/AddPost.jsx
+
+Create All Post view waala page - 7:29:00 
+12MegaBlog/src/pages/AllPosts.jsx
+
+Create Edit Post Page - 7:36:00
+12MegaBlog/src/pages/EditPost.jsx
+
+Create Home Page (Easly work)) - 7:39:00
+12MegaBlog/src/pages/Home.jsx
+
+Create Post waala Page - 7:43:00
+
+
+============================================================
+4:59:00 - 7:23:00 Overall Completed
 Step 01 : component create 
 12MegaBlog/src/components/container/Container.jsx
 
@@ -52,7 +76,6 @@ Create Real-Time Editor (RTE) - 6:41:00
 12MegaBlog/src/components/RTE.jsx
 Then , additionally ye required h
 12MegaBlog/src/components/post-form/PostForm.jsx
-
 
 ==================================================================
 4:37:00 -- 4:58:00  Overall
