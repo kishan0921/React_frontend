@@ -41,37 +41,82 @@ function App() {
   // hum updateTodo call Karenge, then issko id and todo chahiye hoga.
   const updateTodo = (id, todo) => {
     // ab wohi apna set todo call krte h, and mujhe pta h isske ander ek  () => {} callback h.
-    // callback me hum old value le liye, then old/prev value pe map laga dete 
-    //mujhe pta h, map laagane se mujhe har ek Todos mil jaayega.
-    // note: har ek todo mere object h, and har object ke ander id h
+    // callback me hum previous value le lenge, then {} ye use ni krenge, kyuki mujhe kuch return ni krna h
+    // to () ye use krenge, then prev value pe ek loop laaga diya (map laaga denge),
+    //Map loop ke ander, hum har ek todo le rahe h (prevTodo) then 
+    // (prevTodo) - har ek individual todo h 
+    // then isspe callback laaga dete h,then, har ek jo prevTodo mil raha h usske saath id hai 
+    // prevTodo.id - ye old waala todo ka id match kr rahe h new todo waala id se  === id 
+    // then ? mtlb agar true hai, mtlb id mil gayi h to new todo daal do
+    // : else flase me prevTodo, mtlb id ni mili h to old Todo daal do.(woohi purana waala no change - prevTodo)
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo )))
-
-    
   }
 
+  // ab delete functionality dekh lete h.
+  // deleteTodo ke liye mujhe bas id chahiye 
   const deleteTodo = (id) => {
+    // isske baad hum setTodos ko call kr denge
+    // setTodos ke ander mujhe prev value ka access de do,
+    // then prev pe filter method ka use kr lenge.
+    // filter ke ander hum saari todo bhej denge, then bolenge ki aap saari value aane do todo ki
+    // bas ek value mt laagao jo ki, todo.id jo hai wo match ni krni chahiye humari id se.
     setTodos((prev) => prev.filter((todo) => todo.id !== id))
   }
 
+  // ab toggleComplete ka krte h, isske liye mujhe bas id chahiye
   const toggleComplete = (id) => {
+    // then isske ander hum setTodos call kr denge.
     //console.log(id);
+
+    // setTodos me saari prev state/value ka access chahiye
     setTodos((prev) => 
+      // saari prev value pe ek loop laga denge called map
+    //map laagane par, har ek map ke ander value ka access mil jaayega.
+    // (prevTodo) => ? "true": "false"  loop laaga rahe h
     prev.map((prevTodo) => 
-      prevTodo.id === id ? { ...prevTodo, 
+      // mujhe yaha check krna hoga, ki jo prevTodo hai wo wohi waali id jo aapne pass ki h,
+    // agar id match hoti h then, baaki saari value as it is rakho ...prevTodo, bass ek value change kr do
+    //...prevTodo saari value aa gyi yhen , laga kr completed lo then issko override kr denge
+    // prevTodo.completed value le rahe h, then ! use krke aagar true/false hoga to false/true kr denge
+      prevTodo.id === id ? { ...prevTodo,
+        // agar id match ni hoti h, to kuch mt kro prevTodo ko prevTodo hi rahne do. 
         completed: !prevTodo.completed } : prevTodo))
   }
 
+
+  // note: Ab hum localStorage dekhenge.
+  // localStorage ko JSON me value chahiye , so hume convert krna hoga string value ko, so JSON use krna hoga.
+
+  // first time page hone pe useEffect call hoga. only and dependency array ni h t fir run ni hoga.
   useEffect(() => {
+    // firstly, saaari value le kar aani h
+    // get krte time mujhe sirf key ki value batani padti h.
+    // to hum localStorage ka use krenge then getItem method use krenge, then key bata dnege 
+    // then mujhe JSON me chahiye value chahiye, so JSON.parse se convert kr denge string value ko.
     const todos = JSON.parse(localStorage.getItem("todos"))
 
+    // ab hume bas value set krni h agar uss todos me kuch mile tb hi.
+    // to check kr lete h,
+    //ki todos hai ya ni and also todos to h, but value 0 se zaada hona chahiye
     if (todos && todos.length > 0) {
+      // sab kuch thik h then, setTodos ko call kr denge, then todos saare de denge setTodos ko.
       setTodos(todos)
     }
-  }, [])
+  }, 
+  // koi dependency array ni h
+  [])
+
+
 
   useEffect(() => {
+    // wohi localStorage lete h then setItem method use krenge, then key aur value batana hoga
+    // key meri hai "todos"
+    // and value mujhe string me hi dena padta hai , so Json value ko convert kr denge string me using JSON.stringify
+    // then todos daal do, bss kthm kaam.
     localStorage.setItem("todos", JSON.stringify(todos))
-  }, [todos])
+  },
+  // dependency array me mera todos h
+  [todos])
   
 
 
