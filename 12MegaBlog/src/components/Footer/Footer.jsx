@@ -1,8 +1,15 @@
+
+
+// ----------------------------------------Important-----------------------------------------------
+//Video mai Code copy kiya and paste kr diya bass.
+// 12MegaBlog/src/components/Footer/Footer.jsx
+
 // Note a single line - java script likha gya hai
 // I just copy from github and paste , kyuki only css is written
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+// Logo jo banaye h ussko import kr lete h
 import Logo from '../Logo'
 
 function Footer() {

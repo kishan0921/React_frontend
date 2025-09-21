@@ -1,9 +1,58 @@
 
 
 
-4:59:00 
+4:59:00 - 
 Step 01 : component create 
 12MegaBlog/src/components/container/Container.jsx
+
+Video mai Code copy kiya and paste kr diya bass.
+12MegaBlog/src/components/Footer/Footer.jsx
+
+create a Logo 
+12MegaBlog/src/components/Logo.jsx
+
+Create Header - 5:04:00 - 5:21:00
+12MegaBlog/src/components/Header/Header.jsx
+
+Create LogoutBtn - 5:07:00
+12MegaBlog/src/components/Header/LogoutBtn.jsx
+
+Create Common Use Button - 5:22:00
+12MegaBlog/src/components/Button.jsx
+
+Create input.jsx (important file)
+12MegaBlog/src/components/input.jsx
+
+Create Select.jsx  (Ye mera select button h)
+12MegaBlog/src/components/Select.jsx
+
+Create Card component- 5:45:00 (cards waala component banayenge)
+12MegaBlog/src/components/PostCard.jsx
+
+Create a Login component using React-hook-form - 5:53:00
+12MegaBlog/src/components/Login.jsx
+Extra:
+documentation :- https://react-hook-form.com/get-started#Registerfields
+site: https://regexr.com/
+                // Go to Community Pattern 
+                // then Search : Email -> Email (normal we are using)
+                // then copy the expression
+
+Create a signup - 6:14:00  (Same concept as Login.jsx)
+12MegaBlog/src/components/Signup.jsx
+
+
+Create a authentication layout (So interesting layout) - 6:27:00
+12MegaBlog/src/components/AuthLayout.jsx
+Note: Ye ek mechanishm hai ki kis tarah se pages , and route ko protect kiya jaata hai.
+Basically, ye ek projected container h
+
+
+Create Real-Time Editor (RTE) - 6:41:00
+12MegaBlog/src/components/RTE.jsx
+Then , additionally ye required h
+12MegaBlog/src/components/post-form/PostForm.jsx
+
 
 ==================================================================
 4:37:00 -- 4:58:00  Overall

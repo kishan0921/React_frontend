@@ -1,3 +1,7 @@
+// Create a authentication layout (So interesting layout) - 6:27:00
+// Note: Ye ek mechanishm hai ki kis tarah se pages , and route ko protect kiya jaata hai.
+// Basically, ye ek projected container h
+
 // Ab hum authentication layout ke baare me baat krenge.
 //And ye bahut jagah use hoga, 
 // Note: Ye basically, mechanishm hai ki kaise pages and routes ko protect kiya jaata hai.

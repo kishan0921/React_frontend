@@ -15,10 +15,16 @@ function PostCard({
     <Link to={`/post/${$id}`}>
         <div className='w-full bg-gray-100 rounded-xl p-4'>
             <div className='w-full justify-center mb-4'>
+              {/* Ab isske ander kuch ni, ek image liya h and text bas. */}
+              {/* Appwrite ki service me (src/appwrite/config.js) ek getFilePreview waala feature h  
+              isska use kr lenge, then merea featuredImage waala ka id pass kr diya hu.
+              */}
                 <img src={appwriteService.getFilePreview(featuredImage)} alt={title}
                 className='rounded-xl' />
 
             </div>
+
+            {/* Image end ho jaata hai, then ek H2 hai mere pass  */}
             <h2
             className='text-xl font-bold'
             >{title}</h2>

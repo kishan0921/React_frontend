@@ -120,6 +120,10 @@ function Login() {
                 required: true,
                 // 2nd option validate h
                 validate: {
+                // Use this site: https://regexr.com/
+                // Go to Community Pattern 
+                // then Search : Email -> Email (normal we are using)
+                // then copy the expression
                         matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                         "Email address must be a valid address",
                     }
