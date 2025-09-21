@@ -136,10 +136,17 @@ function App() {
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
+                        {/* saare apne todo le liya mai , then usspe loop laaga diya 
+                       map waala then map ke ander mere pass saare todo ka access hai.
+                       mtlb saare todo pe 1-1 krke jaayega. */}
                         {todos.map((todo) => (
+                          // ab ek div call kr liya, ab har ek todo waali div unique h ussko 
+                          // baatane ke liye hum key de denge like {todo.id}
                           <div key={todo.id}
                           className='w-full'
                           >
+                            {/* ab yaha pe humne apna TodoItem component call kr liya */}
+                            {/* sirf call krne se ni hoga issko ek props/property bhi pass krni hogi todo={todo} */}
                             <TodoItem todo={todo} />
                           </div>
                         ))}
