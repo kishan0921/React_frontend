@@ -1,6 +1,13 @@
 
 
-7:24:00 - 
+
+
+8:20:00 - 8:46:00 - Summary End 
+
+7:53:00 - 8:19:00 - Debugging & TODO
+
+=================================================
+7:24:00 - 7:52:00 [Project Coding Done]
 
 Step 01:
 Create Signup.jsx - 7:24:00
@@ -22,6 +29,11 @@ Create Home Page (Easly work)) - 7:39:00
 12MegaBlog/src/pages/Home.jsx
 
 Create Post waala Page - 7:43:00
+//Note: Video me Code directly Paste kiya gya hai.
+12MegaBlog/src/pages/Post.jsx
+
+Main File Modified - 7:45:00 - 7:52:00 
+12MegaBlog/src/main.jsx
 
 
 ============================================================

@@ -23,17 +23,28 @@ import AllPosts from "./pages/AllPosts";
 // ab mujhe chahiye router , to create kr lete h Browser router 
 // createBrowserRouter ke ander hum ek empty arra
 const router = createBrowserRouter([
-  // ab isske ander 1 object de dete h
+  // ab isske ander 1 object, hume de diya hai.
 {
+    // ye lijiye path mera root hogya hai.
     path: "/",
+    // element kon sa rander krna chahte hai. <App> components kr do.
     element: <App />,
+    // Aur ek children, and children apne aap me ek array h
     children: [
+        // isske ander bahut saare object aayegen, ek ek krke
         {
+            // Ye home waala path ho gya 
             path: "/",
+            // and yaha hum <Home> components render krenge.
             element: <Home />,
         },
         {
+            // Ab interesting Chiz, dusra jo mera path h wo "login" hai.
             path: "/login",
+            // and element me hum Login components render krenge,
+            // element ke ander () - parentheis le lijiye , jisse aap wrap kr paayenge.
+            // then Login components ko hum AuthLayout components ke ander Wrap krenge.
+            // then Login ke liye manual authentication data mujhe false chahiye.
             element: (
                 <AuthLayout authentication={false}>
                     <Login />
@@ -41,8 +52,13 @@ const router = createBrowserRouter([
             ),
         },
         {
+            // Ab interesting Chiz, dusra jo mera path h wo "/signup" hai
             path: "/signup",
             element: (
+            // and element me hum Signup components render krenge,
+            // element ke ander () - parentheis le lijiye , jisse aap wrap kr paayenge.
+            // then Login components ko hum AuthLayout components ke ander Wrap krenge.
+            // then Login ke liye manual authentication data mujhe false chahiye.
                 <AuthLayout authentication={false}>
                     <Signup />
                 </AuthLayout>
@@ -51,8 +67,10 @@ const router = createBrowserRouter([
         {
             path: "/all-posts",
             element: (
+                // Yaha mujhe authentication chahiye so hum false assign ni kr rahe h.
                 <AuthLayout authentication>
                     {" "}
+                {/*AllPosts waala components render kr diye h */}
                     <AllPosts />
                 </AuthLayout>
             ),
@@ -60,8 +78,10 @@ const router = createBrowserRouter([
         {
             path: "/add-post",
             element: (
+                // Yaha mujhe authentication chahiye so hum false assign ni kr rahe h.
                 <AuthLayout authentication>
                     {" "}
+                {/*AddPost waala components render kr diye h */}
                     <AddPost />
                 </AuthLayout>
             ),
@@ -69,8 +89,10 @@ const router = createBrowserRouter([
         {
             path: "/edit-post/:slug",
             element: (
+                // Yaha mujhe authentication chahiye so hum false assign ni kr rahe h.
                 <AuthLayout authentication>
                     {" "}
+                {/*EditPost waala components render kr diye h */}
                     <EditPost />
                 </AuthLayout>
             ),
@@ -84,7 +106,7 @@ const router = createBrowserRouter([
 ])
 
 
-// Earlier - method
+// Earlier - method 01
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
@@ -95,10 +117,13 @@ const router = createBrowserRouter([
 // )
 
 
-// Now 
+// New Method - 02
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
+    {/* Ab mujhe actually me ek router provider chahiye  
+    and then, issko chahiye ek router and value aa jaayegi, iss file me jo router banaya h usski.
+    */}
     <RouterProvider router={router}/>
     </Provider>
   </React.StrictMode>,
