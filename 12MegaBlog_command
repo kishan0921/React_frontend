@@ -1,13 +1,82 @@
-// 
 
 
 
+4:59:00 
+Step 01 : component create 
+12MegaBlog/src/components/container/Container.jsx
+
+==================================================================
+4:37:00 -- 4:58:00  Overall
+
+Step 03: 
+tailwindcss installing..
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 
+then go to 
+12MegaBlog/tailwindcss.config.js
+and paste this:
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+then go to 
+/project/workspace/12MegaBlog/src/index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+then code in this file 
+/project/workspace/12MegaBlog/src/App.jsx
+
+then go to 
+/project/workspace/12MegaBlog/src/main.jsx
+
+
+Step 02:
+-------------------!important-------------------
+// note: jab mujhe redux ko react ke saath use krna hai to useDispatch , lena bahut zaruri h
+import {useDispatch} from 'react-redux'
+
+Step 01:
+/project/workspace/12MegaBlog/src/components/index.js (only import header & Footer)
+then work into this file,
+/project/workspace/12MegaBlog/src/App.jsx
+
+========================================================
+4:28:00 - 4:36:00
+Rule:To create any slice, you need 3 things
+1.name 
+2.initialState
+3.reducers
+
+and then reducers ke ander jo bhi hote hai, unke pass (state) and (action)
+ka access hota hai.
+
+slice/feature create 
+12MegaBlog/src/store/authSlice.js
+
+Store created
+and store ka ye hai ki, mujhe saare reducer ke baare me batao
+12MegaBlog/src/store/store.js
+========================================================
+4:27:00 - Summary till now 
 =========================================================
-3:27:00 - Appwrite documentation (Discussion)
+3:27:00 - 4:26:00
+Step 02:
+then ek mujhe service banani h, jo ki appwrite se related hai.
+so 
+
+1st serive appwrite ki
+src/appwrite/auth.js
+
+2nd serive appwrite ki
+src/appwrite/config.js
+
+Step 01:
+Appwrite documentation (Discussion)
 note: video waala specific ni mila.
 https://appwrite.io/docs/products/auth
 

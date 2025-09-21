@@ -1,11 +1,17 @@
 import './App.css'
+
+// note: jab mujhe redux ko react ke saath use krna hai to useDispatch , lena bahut zaruri h
 import {useDispatch} from 'react-redux'
+//state manage krne ke liye useState.& useEffect ka use krke jab page load hoga to hum 
+// puch lenge user logged in hai ya ni. so ye sab import kr lete h react se.
 import React, {useState,useEffect} from 'react'
 
+// login and logout waala slice  import kr lete hai slice se called authSlice
 import { login, logout } from './store/authSlice'
 
-// auth service jo apna bana h, ussko import kar lete h
+// auth service jo apna appwrite wala  bana h, ussko import kar lete h
 import authService from "./appwrite/auth"
+// Footer waala components import kr lete h
 import { Footer } from './components'
 
 function App() { 

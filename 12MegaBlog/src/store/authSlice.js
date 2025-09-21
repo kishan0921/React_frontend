@@ -1,3 +1,5 @@
+
+// ab slice banane ke liye mujhe bss createSlice chahiye, jo ki redux toolkit se mil jaayega.
 import { createSlice } from "@reduxjs/toolkit";
 
 
@@ -8,6 +10,14 @@ const initialState = {
     userData : null
 }
 
+
+// Rule:To create any slice, you need 3 things
+// 1.name 
+// 2.initialState
+// 3.reducers
+
+// and then reducers ke ander jo bhi hote hai, unke pass (state) and (action)
+// ka access hota hai.
 
 // Ab ek slice bana lenge
 // Note: ye jo slice hai humara , ye basically authentication ko track krne ke liye h

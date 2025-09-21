@@ -1,3 +1,10 @@
+// then ek mujhe service banani h, jo ki appwrite se related hai.
+// so 
+// src/appwrite/auth.js
+// src/appwrite/config.js
+
+// ye pure pure service waali file hai, appwrite ki
+
 import  {Client, Account, ID} from "appwrite";
 import conf from "../conf/conf.js";
 

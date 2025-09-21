@@ -10,7 +10,7 @@ import { AuthLayout, Login } from './components/index.js'
 import { Provider } from 'react-redux'
 // step 2: store bhi laagega
 import store from "./store/store.js"
-// step 3- App ko wrap kr do provider ke ander 
+// step 3- App ko wrap kr do provider ke ander (Down - see Earlier method)
 
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
 ])
 
 
-// Earlier 
+// Earlier - method
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
