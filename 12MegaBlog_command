@@ -6,24 +6,35 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 
+=========================================================
+3:27:00 - Appwrite documentation (Discussion)
+note: video waala specific ni mila.
+https://appwrite.io/docs/products/auth
 
+======================
+2:56:00 - 3:27:00
+step 04: production grade conf file create
+/src/conf/conf.js
 
-12MegaBlog/src/conf/conf.js
+Step 03: .env.sample file created
+/src/.env.sample
 
-==========================
-
+Step 02:
 To start the application :
 npm run dev
 
-======================
+Step 01:
+All required package installed in 1 go
 npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
 
-==============================
 
+================================================================
+2:54:00 - Mega project start
+
+Step 02:
 bun install    -not working
 npm install -g bun
 or npm install
-================================================================
 
 Step 01:
  npm create vite@latest
@@ -42,3 +53,7 @@ Ok to proceed? (y) y
 │
 ◇  Select a variant:
 │  JavaScript
+
+=============================================================
+New Project () - 2:28:00 [Backend using Appwrite]
+Project 07 (Blog App)  (Decoded)- Start 2:36:00
