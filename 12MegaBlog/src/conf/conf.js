@@ -16,7 +16,7 @@ const conf = {
 }
 
 
-// and export bhi kr lenge issko 
+// and AB export bhi kr lenge issko 
 export default conf
 
 
