@@ -29,19 +29,23 @@ export class AuthService {
     }
 
     // ab hum account create waala method banayenge and ussko async rakhenge.
+    // Create account ke liye hume email, password and name chahiye
+    // Create Account method banayenge.
     async createAccount({email,password,name}){
         // ab ye createAccount waala method fail bhi ho skta hai, issliye try catch ka use krenge.
 
         try{
-            // ab mujhe 1st step me await krna h, kisschiz ke liye? - account Create ke liye
+            // ab mujhe 1st step me await krna h, kisschiz ke liye? - account Create ke liye using (this.account.create)
             // unique id generate krne ke liye ID.unique() method ka use kr lenge.
             // and issko 1 variable me store kr lete h
+            // 4 chiz hum create krenge, Unique ID, email, password, name
             const userAccount = await this.account.create(ID.unique(),email,password,name);
 
             // Now ab check krenge user account create hua hai ya nhi.
             // agar userAccount hai , to return kr do uss userAccount ko
             if(userAccount){
-                // call another method
+                // call another method, 
+                // baiscally agar userAccount hai then, hum login waale method call kr denge.
                 return this.login({email,password});
             }
             // agar userAccount nahi hai, then error return kr do.
@@ -56,6 +60,8 @@ export class AuthService {
     }
 
     // ab ek aur login ke liye async method bana lete h
+    // and login ke liye mujhe email,password as parameter lena hoga
+    // Login method banayenge
     async login({email,password}){
         try{
             return await this.account.createEmailSession
@@ -66,6 +72,7 @@ export class AuthService {
 
 
     // ab user logged in hai ya nahi , ye check krna hoga
+    // GetCurrentuser  method baanayenge.
     async getCurrentUser(){
         // ab issme bhi issue aa skta hai , issiye try catch 
         try {
@@ -76,6 +83,7 @@ export class AuthService {
             console.log("Appwrite serive:: getCurrentUser :: error", error);
         }
 
+        //Note: hume kuch return krna hoga , so null
         // and return humlog null kr rahe h
         return null;
     }
@@ -91,7 +99,8 @@ export class AuthService {
 
 }
 
-
+// AuthService class ka ek naya object (instance) bana rahe hain
+// jisse hum login, logout jaise auth-related methods use kar sakte hain
 const authService = new AuthService();
 
 //Ab hum yaha ye AuthService , class ko export kr dete hai
