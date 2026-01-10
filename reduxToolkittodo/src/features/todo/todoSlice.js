@@ -23,12 +23,60 @@ const initialState = {
 };
 
 // Step 03: Ab hum ek Slice Banayenge (Reducers)
+
+// function sayHello(){
+//     console.log("Hello world")
+// }
+
 // And what is Reducers ? - Kuch nahi ek functionality hai. bas
 
+// To hum ek variable Banayenge, "todoSlice" name se and export bhi kr lenge yahi pehli
+// Taaki Aur Jagah isse use kr skke.
+
+//and ye todoSlice variable mera, ek Slice hoga... Ab banega kaise?
+// Ek hi to method hai createSlice() isski help se.
+// iss createSlice({})- method ke ander mostly objects use hoga/ ya aayega.
 export const todoSlice = createSlice({
-  name: "todo",
+  // 01- Ab Slices ke name hote hai. (thoda soch kar rahkna, kyuki jab hum React Devtool Extension use krenge,
+  // Tab yahi name show hoga...wooha pe)
+  name: "todo", // 'todo' name as string le rahe hai, to koi farak ni padega.
+  // 02-Ab har slice ka, initial state hoga hai.
+  // Humne to Already banaya hai uppar to use kr lete hai, warna yaha hum new Bhi bana skte hai.
   initialState,
+
+  // 03- Most Important (Jisske liye mera Store incomplete hai, reducers bana lete hai.)
+  // yaha Reducers kya hai ? ek Property hai.
+  // reducer me hum object lenge.
   reducers: {
+    // Ab isske ander
+    // 1. Property  and
+    // 2. Function aayenge
+
+    // 1.addTodo: ye meri Property hai, and
+    // 2. Function yaha bhi define kr skte hai ,
+
+    // Meethod 01:
+    // ya already uppar create k reference pass kr skte hai
+    // Like - addTodo: sayHello
+    // addTodo: sayHello  - Also use like this way also
+
+    //Method 02:
+    // Yaahi pe mera change aata hai, Redux and ReduxToolkit ka.
+    // OLD Trick :Context Api me hum aise likh rahe the,
+    // Hum function declare kr rahe the, but definition ni kr rahe the.
+    // Like this way ----
+    // addTodo: () =>{}
+    // removeTodo : () => {}
+
+    //NEW TRICK: Yaha hum redux toolkit me hum,
+    // hum function ka declaration bhi kr rahe hai, and definition kr rahe hai.
+    // Note: Jab bhi ek Property add Karenge(Like - addTodo)
+    // to humesha hum 2 chize ka access milega (as Rule/ Syntax yaad kr lo).
+    // 1.State - ek milega state
+    //2.action - Ek milega action
+    // Inn dono ka humesha hi aapke pass access rhega.
+
+    // 1.STATE :-
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
