@@ -1,0 +1,43 @@
+Github Link:
+https://github.com/hiteshchoudhary/chai-aur-react/tree/main/reduxToolkitTodo
+
+
+
+
+
+1:31:20
+
+➜  workspace git:(draft/dazzling-hodgkin) ✗ npm create vite@latest
+│
+◇  Project name:
+│  reduxToolkittodo
+│
+◇  Package name:
+│  reduxtoolkittodo
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  No
+│
+◇  Scaffolding project in /project/workspace/reduxToolkittodo...
+│
+└  Done. Now run:
+
+  cd reduxToolkittodo
+  npm install   or bun i
+  npm run dev
+
+
+Extra : for bun using 
+you have to install the bun Package
+npm install -g bun
+
+then bun install
