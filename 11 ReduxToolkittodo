@@ -5,6 +5,36 @@ https://github.com/hiteshchoudhary/chai-aur-react/tree/main/reduxToolkitTodo
 
 
 
+1:36:00 
+Rule 03:  (Creatting a Reducers) 
+
+
+===============================
+1:35:00 
+Store Kaha pe rakha Jaata hai? 
+
+Rule: 01 Kuch log aapko bolenge Store  
+App/  
+Store/ 
+Src/ 
+Totally, Humari Choice hai.ki kaaha rakhna hai 
+
+
+Hum, app/store.js me rakh rahe hai. 
+/project/workspace/reduxToolkittodo/src/app/store.js 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+1:33:00
+
+Then we have to install these 2 independent library:
+Why two ? - Revise theory that is present in OneNote (Chai and Code)
+
+npm install @reduxjs/toolkit
+npm install react-redux
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 1:31:20
 
 ➜  workspace git:(draft/dazzling-hodgkin) ✗ npm create vite@latest
