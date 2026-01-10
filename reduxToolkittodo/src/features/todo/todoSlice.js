@@ -76,20 +76,82 @@ export const todoSlice = createSlice({
     //2.action - Ek milega action
     // Inn dono ka humesha hi aapke pass access rhega.
 
-    // 1.STATE :-
+    // Ab dono ko kaam me kaise lete hai, wo baatata hu.
+    // 1.STATE (Current initialState ke ander jo hai usska access deta hai):- state jo variable hai, wo mereko acces dega like
+    // Abhi jo meri,"initialState" hai, wo aage jaa kar obviously change ho jaayegi.
+    //To state hume, currently initialState me kya hai usska access dega. (abhi 1 todos hai - to usska access hai mere pass)
+    // waise hi 10 todos hote to sabka access hota mere pass.
+
+    //2.ACTION: access kuch ni hota, kaayi baar hota hai, like-
+    // remove, Aise hi haawa me to remove ni ho jaayega, remove krne ke liye mujhe Id chahiye hogi.
+    // To kuch value mujhe bhi to laagegi, jab mai removeTodo (method) ko call krunga.
+    // To wo values, Kaha se milegi? - Action me se milti hai.
+
     addTodo: (state, action) => {
+      // Now, Ab kuch ni krna Add todo krna hai.
+      // Ab todo kaise milega ?
+      // Jaise Id milegi, waise hi todos bhi milega.
+      // to Chalo ek new todos bana lete hai.
+      // And todo kaise banega ? - ek object se
+
       const todo = {
-        id: nanoid(),
-        text: action.payload,
+        id: nanoid(), //(Id unique honi chahiye - Date.now()/ nanoid() method yaha hum use kr rahe h)
+        text: action.payload, // (text hum  action ke ander payload se nikalenge)
       };
+      // Ab todo to ban gaya hai.Lakin state kr ander thodi update hua hai.
+      // currently, initialState me jo hai wohi state me hai...so State ko update krna hoga.
+
+      // Now, State ko update krenge.
+      // state ka access lo, state ke ander aapne todos liye hai.
+      // Note: (initialState) hi mera state hai
+      // then state ke ander todos ke ander hum ye new todo push kr denge.
+      // then state update ho gya.
       state.todos.push(todo);
     },
+
+    // Now, remove - Pure mera Revision kar lete hai.
+    // Point 01: removeTodo Method ke ander mujhe 2 chiz ka access milega hmesha (state, action)
+    // Point 02: State ke ander - Current State/ initialState jo bhi h currently wo milta hai
+    // Point 03: Action ke ander - jo bhi data passs ho raha hai.
+    // Ab Mujhe pta hai, remove krne ke liye action ke ander inhone ek ID bheja hi hoga.
+    // To Agar Id bheja hoga, to hum ek filter() method laga denge apne todos pe.
+    // and jo bhi action.payload wo agar mera match ho jaata hai (todo.id) se then remove kr do. Ussko nahi lenge.
+    // Baaki ko le lenge.
+
     removeTodo: (state, action) => {
+      // state/initialState le lete hai then state ke ander mera todos ka access hai.
+      // then issko override kr denge.
+      // state.todos se then filter() method ka use kr lenge.
+      // then filter() ke ander hume har ek todo ka acces milega.
+      //then har ek todos ka acces lenge to kya bolenge ussko ?
+      //Kuch ni, jo mera todo hai usske pass id hogi, ussko match kr lo ki wo nahi match honi chahiye action.payload se
+      // Then, automatically wo id compare kr lega..EASY EASY !
+      // jo nahi match kr raha usska value true ho jaayega -and remove ho jaayega
+      // and baaki ka false and show ho jaayega.
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
   },
+
+  // Aise hi aap aur bhi reducers add kr skte ho. (update waala aap baanana)
 });
 
+// STEP 04:
+// MOST: IMP - Ye bhi RULE: Uppar todoSlice me hum reducers export kr diya hai.
+// Lakin aise export ni hota, aapko 2 part isske export krne hote hai.
+
+// 1st Part:-Jitni bhi reducers ki functionality hai ussko export Karenge.
+// and ye reducer ki value kaha se aayegi. todoSlice.action se mujhe reducer ko value (addTodo, removeTodo) mil jaayegi
+// Ye individual functionality humne export ki hai....jisse ye humare component me kaam aayega
 export const { addTodo, removeTodo } = todoSlice.actions;
 
+// 2nd Part:-Ab aapko yaad hoga, humare pass store hai, to usssko bhi saari awareness
+// chahiye inn saare reducers ke baare me.
+// Agar store ko awareness nahi hai ? - Then store ye newly created reducers nahi maintain kr paayega.
+// Kyuki Store mera restricted hai.
+// Store bolta hai ki , mai value har kisi se lekar update ni krta.
+// Store ke ander aap jo jo reducer register kroge....mai unnse hi bas value le kar update krta hu.
+// To store ko saare ke saare reducer ka list chahiye hota hai.
+
+// To Yaha mere saare reducer todoSlice ke ander reducer me hai to ussko export kr dete hai.
+// Hamesha koi bhi reducers banega baad me export hoga hi issi tarike se.... Taaki hum ussko component me use kr skke
 export default todoSlice.reducer;
