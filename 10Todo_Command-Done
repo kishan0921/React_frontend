@@ -1,0 +1,50 @@
+
+
+
+1:15:00 - end this project
+
+
+7:43
+npm run dev
+
+=======================================================
+7:42
+
+https://v3.tailwindcss.com/docs/installation
+
+then paste this -
+npm i
+npm install -D tailwindcss@3
+npx tailwindcss init
+
+Then, /project/workspace/Todo/tailwind.config.js
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+then , 
+/project/workspace/Todo/src/index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Then, 
+/project/workspace/Todo/src/App.jsx
+  return (
+    <>
+    <h1 class="text-3xl font-bold underline">
+    Hello world!
+    </h1>
+    </>
+)
+==========================
+00:7:07
+Create Todo Project 
+
+npm create vite@latest
+
+Project name: 10todocontextLocal
+package name : 10todocontextLocal
+select a framework : React 
+Select a variant : JavaScript
+
