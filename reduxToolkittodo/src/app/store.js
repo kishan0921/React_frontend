@@ -7,6 +7,9 @@
 // Now, Store Ban gaya hai , But ye Properly ready nahi hai use-case ke liye. [continue1.]
 import { configureStore } from "@reduxjs/toolkit";
 
+// Step 03: Store ko Knowledge de do,Reducers ke baare me
+// Sabse pehle jo humare, todoReducer hai ussko le aao
+// Then , configureStore ke ander issko Rakh do [continue2..]
 import todoReducer from "../features/todo/todoSlice";
 
 // Step 02:
@@ -18,5 +21,10 @@ import todoReducer from "../features/todo/todoSlice";
 // and configureStore({}) - most of the chize as {} object hi lega apne ander.
 // But ye abhi ready nahi hai [1:35:00] tk
 export const store = configureStore({
+  // [continue2..]
+  // Note: As key-value reducer rakhenge.
+  // Ab hume store ke ander rakhna kaise hai, Kuch ni as Key-value yaaha pe daal do.
+  // Key Mera: Reducer hai (reducer ki poori list bhi de skte ho, But yaha 1 hi reducer hai apne pass abhi)
+  // Value as todoReducer rakhenge.
   reducer: todoReducer,
 });
