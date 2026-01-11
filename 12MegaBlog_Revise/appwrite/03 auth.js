@@ -2,7 +2,7 @@
 // so
 // src/appwrite/auth.js
 // src/appwrite/config.js
-// ye pure pure service waali file hai, appwrite ki
+// ye puri auth service waali file hai, appwrite ki
 
 // Note: TOTAL STEP 01- 14
 // Appwrite ki ye auth serive ho gayi hai ready.
