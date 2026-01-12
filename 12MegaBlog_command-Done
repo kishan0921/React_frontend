@@ -130,7 +130,7 @@ then work into this file,
 /project/workspace/12MegaBlog/src/App.jsx
 
 ========================================================
-4:28:00 - 4:36:00
+4:28:00 - 4:36:00  [Store config and create]
 Rule:To create any slice, you need 3 things
 1.name 
 2.initialState
@@ -141,6 +141,7 @@ ka access hota hai.
 
 slice/feature create 
 12MegaBlog/src/store/authSlice.js
+
 
 Store created
 and store ka ye hai ki, mujhe saare reducer ke baare me batao
