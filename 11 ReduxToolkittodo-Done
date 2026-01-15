@@ -1,0 +1,78 @@
+Github Link:
+https://github.com/hiteshchoudhary/chai-aur-react/tree/main/reduxToolkitTodo
+
+
+Note: Full Step-wise Mentioned in OneNote [Go and read-revise]
+
+
+2:16:30 – Overall Summary Till Here (Revision) 
+
+2:11:50 – Redux Dev Tool (How to use) 
+
+
+1:36:00 
+Rule 03:  (Creatting a Reducers) 
+
+
+===============================
+1:35:00 
+Store Kaha pe rakha Jaata hai? 
+
+Rule: 01 Kuch log aapko bolenge Store  
+App/  
+Store/ 
+Src/ 
+Totally, Humari Choice hai.ki kaaha rakhna hai 
+
+
+Hum, app/store.js me rakh rahe hai. 
+/project/workspace/reduxToolkittodo/src/app/store.js 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+1:33:00
+
+Then we have to install these 2 independent library:
+Why two ? - Revise theory that is present in OneNote (Chai and Code)
+
+npm install @reduxjs/toolkit
+npm install react-redux
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+1:31:20
+
+➜  workspace git:(draft/dazzling-hodgkin) ✗ npm create vite@latest
+│
+◇  Project name:
+│  reduxToolkittodo
+│
+◇  Package name:
+│  reduxtoolkittodo
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Use rolldown-vite (Experimental)?:
+│  No
+│
+◇  Install with npm and start now?
+│  No
+│
+◇  Scaffolding project in /project/workspace/reduxToolkittodo...
+│
+└  Done. Now run:
+
+  cd reduxToolkittodo
+  npm install   or bun i
+  npm run dev
+
+
+Extra : for bun using 
+you have to install the bun Package
+npm install -g bun
+
+then bun install

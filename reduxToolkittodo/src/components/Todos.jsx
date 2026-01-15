@@ -1,23 +1,62 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import {removeTodo} from '../features/todo/todoSlice'
+import React from "react";
+// Hume information lena hai, jo ki store ke pass hai, to hum useSelector() ka use krenge,
+// jo ki react-redux ke pass hai, so import kr lete hai usse.
+// Ab jo information aayegi, store se ussmese aap kuch delete bhi to kroge
+// So, modification waala kam krna hai to useDispatch() method ka use bhi hoga, to ussko bhi import kr lete h
+import { useSelector, useDispatch } from "react-redux";
+
+// Ab dispatch use kiya hu, to koi na koi,mere pass reducer hoga , jisske through hum modification krenge, store me
+// to removeTodo reducer ko import kr lete hai,Slice(reducer) se
+import { removeTodo } from "../features/todo/todoSlice";
 
 function Todos() {
-    const todos = useSelector(state => state.todos)
-    const dispatch = useDispatch()
+  // Step :01 Ab hum todos kaise Laaye? - useSelector() ka use krke
+  //Ab advantage ye h ki,Iss method ke ander hume State ka access milta hai.Ek callback ke ander.
+  // then , state ka access mil gaya then, iss state ke ander se jo bhi value chahiye wo nikal lijiye.
+  // mai state ke ander se todos ki value nikalna chahta hu.(todos - initialState me hai, and updated bhi h, sab value hai isse pass)
+  // and jo bhi value aayegi, ussko hold/ rakh lete hai ek varible ke ander.
+  const todos = useSelector((state) => state.todos);
+
+  // Step 02:
+  // Hun modification/dispatch bhi kreeng to ussko bhi hold kr lete hai,dispatch variable me.
+  const dispatch = useDispatch();
 
   return (
     <>
-    <div>Todos</div>
-    <ul className="list-none">
+      <div>Todos</div>
+      <ul className="list-none">
+        {/* saare ke saare todos lo , jo ki store se aaye hai, then map lo then, loop chala do 
+         har ek todo pe
+        */}
         {todos.map((todo) => (
+          //  ab mujhe ek li/div kuch bhi le lo, then key-value lena hoga,
+          // to mujhe pta hai todo ke ander id hai. to acceess kr lete hai (todo.id)
           <li
             className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
             key={todo.id}
           >
-            <div className='text-white'>{todo.text}</div>
+            {/* // Then, ab yaha bas mujhe dena hai, uss value ko todo.text waala ko{todo.text}  */}
+            <div className="text-white">{todo.text}</div>
+            {/* Ab ek button bana lete hai, then ab iss button ko kaise use krna h?
+            kuch nhai,button onClick{} hone pe, onClick ke ander hume ab ye krna
+            hai,hume call krna hai dispatch(), then isske ander reducer ko call
+            kro(removeTodo) 
+             */}
+            {/* Most Important: onclick ke ander mujhe call krna */}
+            {/* hai, dispatch() method. like- onclick{dispatch()}. But ye allowed ni h
+            onclick ke ander hum bas reference de skte hai, onclick{yaha reference de do}
+
+            But,Hume to method call krna hai onclick ke ander,So
+            Hum ek callback ka use kr lenge, onclick{} ke ander then, dispatch() method call krenge. */}
+            {/* Note: Jb bhi aise method ke ander parmeter pass krne hote hai, to
+            hum ek callback fire krte hai ()=> - Agar {} laagate hai to
+            immediately execute ho jaayega, but hume to use execute krna hai,
+            jab koi use button pe click kre, Issliye hum callback use krte hai. */}
+
             <button
-             onClick={() => dispatch(removeTodo(todo.id))}
+              // Simply, humne dispatch() method call kiya then, removeTodo reducer call kiya then,isske ander wo id de do,
+              // Jiss todo ki id aapko delete krni hai...bas simple
+              onClick={() => dispatch(removeTodo(todo.id))}
               className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
             >
               <svg
@@ -39,7 +78,7 @@ function Todos() {
         ))}
       </ul>
     </>
-  )
+  );
 }
 
-export default Todos
+export default Todos;
