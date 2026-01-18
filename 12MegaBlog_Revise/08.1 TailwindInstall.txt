@@ -1,0 +1,18 @@
+https://v3.tailwindcss.com/docs/installation
+
+
+STEP : 01
+npm install -D tailwindcss@3
+npx tailwindcss init
+
+STEP : 02 
+tailwind.config.js
+
+  content: ["./src/**/*.{html,js}"],
+
+STEP : 03
+src/input.css  (index.css)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
